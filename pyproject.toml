@@ -1,0 +1,30 @@
+[project]
+name = "srs-research"
+version = "0.1.0"
+description = "Research prototype: a spaced-repetition scheduler whose intervals are adjusted by response latency, HRV and sleep."
+readme = "README.md"
+authors = [
+    { name = "Yanis Barbara", email = "barbarayanis14@gmail.com" }
+]
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.162.0",
+    "pandas>=2.2.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.4.0",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.1.6",
+    "streamlit>=1.66.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.uv]
+# An application, not a library: nothing to build or install.
+package = false
